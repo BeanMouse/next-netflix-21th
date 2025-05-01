@@ -2,6 +2,7 @@
 
 import { Movie } from "@/types/movie";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -47,6 +48,7 @@ export default function Home() {
               width={200}
             />
             <p>{movie.title}</p>
+            <Link href={`/search/${movie.id}`}>보러가기</Link>
           </li>
         ))}
       </ul>
