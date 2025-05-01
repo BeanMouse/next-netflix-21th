@@ -48,7 +48,7 @@ export default function Home() {
               width={200}
             />
             <p>{movie.title}</p>
-            <Link href={`/search/${movie.id}`}>보러가기</Link>
+            <Link href={`/movie/${movie.id}`}>보러가기</Link>
           </li>
         ))}
       </ul>
