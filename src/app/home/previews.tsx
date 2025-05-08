@@ -5,10 +5,10 @@ import HorizontalScroll from "./horizontal-scroll";
 import SqaurePoster from "./square-poster";
 
 const Previews = async () => {
-  const { results } = await fetchMovies(API_URLS.top10InKoreaToday);
+  const { results } = await fetchMovies(API_URLS.koreaMovies);
 
   return (
-    <div className="flex flex-col gap-6 pl-3">
+    <div className="flex flex-col gap-6 pl-3 py-6">
       <h1 className="font-Headline1 pl-1">Previews</h1>
       <HorizontalScroll>
         {results.map(

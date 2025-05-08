@@ -31,7 +31,7 @@ const RectangleViewer = async ({
               <Image
                 className="object-cover w-auto h-full"
                 src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-                alt={original_title}
+                alt={original_title || "movie"}
                 fill
               />
             </RectanglePoster>
