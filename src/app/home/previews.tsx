@@ -23,10 +23,11 @@ const Previews = async () => {
           }) => (
             <SqaurePoster key={id}>
               <Image
-                className="object-cover w-auto h-full"
+                className="object-cover w-[102px] h-[102px]"
                 src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
                 alt={title}
-                fill
+                width={102}
+                height={102}
               />
             </SqaurePoster>
           )

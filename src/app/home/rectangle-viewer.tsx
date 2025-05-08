@@ -29,10 +29,11 @@ const RectangleViewer = async ({
           }) => (
             <RectanglePoster key={id}>
               <Image
-                className="object-cover w-auto h-full"
+                className="object-cover w-[103px] h-[161px]"
                 src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
                 alt={original_title || "movie"}
-                fill
+                width={103}
+                height={161}
               />
             </RectanglePoster>
           )

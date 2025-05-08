@@ -18,9 +18,9 @@ export default async function HomePage() {
           src={`https://image.tmdb.org/t/p/w780/${randomMovie.poster_path}`}
           alt={randomMovie.original_title}
           width={375}
-          height={410}
+          height={440}
           priority
-          className="object-cover"
+          className="object-cover w-[375px] h-[440px]"
         />
         <div className="absolute inset-0 z-10 bg-gradient-overlay" />
       </div>
