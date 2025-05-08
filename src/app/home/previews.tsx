@@ -1,0 +1,39 @@
+import Image from "next/image";
+import { API_URLS } from "@/lib/apiUrls";
+import { fetchMovies } from "@/lib/tmdb";
+import HorizontalScroll from "./horizontal-scroll";
+import SqaurePoster from "./square-poster";
+
+const Previews = async () => {
+  const { results } = await fetchMovies(API_URLS.top10InKoreaToday);
+
+  return (
+    <div className="flex flex-col gap-6 pl-3">
+      <h1 className="font-Headline1 pl-1">Previews</h1>
+      <HorizontalScroll>
+        {results.map(
+          ({
+            id,
+            title,
+            poster_path,
+          }: {
+            id: number;
+            title: string;
+            poster_path: string;
+          }) => (
+            <SqaurePoster key={id}>
+              <Image
+                className="object-cover w-auto h-full"
+                src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+                alt={title}
+                fill
+              />
+            </SqaurePoster>
+          )
+        )}
+      </HorizontalScroll>
+    </div>
+  );
+};
+
+export default Previews;
