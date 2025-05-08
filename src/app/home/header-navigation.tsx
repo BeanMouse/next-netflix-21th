@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeaderNavigation = () => {
   return (
     <div className="flex gap-6 items-center px-4 py-6">
-      <Link href={"/home"}>
+      <Link href={"/"}>
         <Logo />
       </Link>
       <ul className="flex font-body-1 flex-1 justify-around">
