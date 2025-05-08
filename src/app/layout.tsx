@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1E1E1E] `}>
         <div className={`${layout} flex flex-col justify-between`}>
-          <div className="flex-1">{children}</div>
+          <div className="flex-1 overflow-hidden">{children}</div>
           <MainNavigation />
           <HomeIndicator />
         </div>
