@@ -1,5 +1,3 @@
-"use client";
-
-export default function Home() {
-  return <div>넷플릭스</div>;
+export default async function Lending() {
+  return <div className="">lending</div>;
 }
