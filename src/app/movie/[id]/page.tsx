@@ -1,4 +1,6 @@
-"use client";
+("use client");
+export const dynamic = "force-dynamic";
+
 import { Movie } from "@/types/movie";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
