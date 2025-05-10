@@ -26,7 +26,8 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       className="scrollbar-none flex gap-[7px] overflow-x-auto pl-3"
-      ref={horizontalRef}>
+      ref={horizontalRef}
+    >
       {children}
     </div>
   );

@@ -49,7 +49,8 @@ const MainNavigation = () => {
           <Link
             href={href}
             key={label}
-            className={isActive ? "text-white" : "text-[#8C8787]"}>
+            className={isActive ? "text-white" : "text-[#8C8787]"}
+          >
             <NavIcon>
               {isActive ? <ActiveIcon /> : <Icon />}
               <span>{label}</span>
