@@ -24,7 +24,7 @@ export default async function HomePage() {
         />
         <div className="absolute inset-0 z-10 bg-gradient-overlay" />
       </div>
-      <BannerDescription rank={randomIndex} />
+      <BannerDescription rank={randomIndex + 1} />
       <BannerOptions />
 
       <Previews />
