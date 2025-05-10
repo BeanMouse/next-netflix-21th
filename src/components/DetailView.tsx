@@ -12,7 +12,7 @@ export default function DetailView() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://api.themoviedb.org/3/movie/${id}?api_key=26086c2efcb6b6d6e2ae60b066726e74&language=ko-KR`;
+      const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}&language=ko-KR`;
 
       const res = await fetch(url);
       const data = await res.json();
