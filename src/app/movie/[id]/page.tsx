@@ -1,5 +1,4 @@
 "use client";
-export const dynamic = "force-dynamic";
 
 import { Movie } from "@/types/movie";
 import { useEffect, useState } from "react";
@@ -12,13 +11,9 @@ export default function DetailView() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://api.themoviedb.org/3/movie/${id}`;
-      const res = await fetch(url, {
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
-          Accept: "application/json",
-        },
-      });
+      const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`;
+
+      const res = await fetch(url);
       const data = await res.json();
       setMovie(data);
     };
